@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 450px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 1.1rem;
+      width: 100%;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      border-radius: 5px;
+      display: none;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Us</h1>
+
+  <form id="contactForm" novalidate>
+    <label for="name">Name *</label>
+    <input id="name" name="name" type="text" required />
+    <div id="nameError" class="error"></div>
+
+    <label for="email">Email *</label>
+    <input id="email" name="email" type="email" required />
+    <div id="emailError" class="error"></div>
+
+    <label for="age">Age</label>
+    <input id="age" name="age" type="number" min="1" max="120" />
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="4"
